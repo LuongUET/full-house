@@ -1,0 +1,2053 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lập Trình C++ 29 Rankings - Lap trinh 24h</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="None">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <style type="text/css" id="cus_styles">
+        .cus {
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .cus {
+                display: block;
+            }
+            
+        .cus img {
+            max-width: 100%;
+            height: auto;
+        }
+  
+        .cclearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+  
+        .cwp-block-media-text.has-media-on-the-right .cwp-block-media-text__media {
+            /*!rtl:begin:ignore*/
+            grid-column: 2;
+            grid-row: 1
+            /*!rtl:end:ignore*/
+        }
+  
+        .cwp-block-media-text.has-media-on-the-right .cwp-block-media-text__content {
+            /*!rtl:begin:ignore*/
+            grid-column: 1;
+            grid-row: 1
+            /*!rtl:end:ignore*/
+        }
+  
+        .cwp-block-media-text {
+            /*!rtl:begin:ignore*/
+            direction: ltr;
+            /*!rtl:end:ignore*/
+            display: grid;
+            grid-template-columns: 50% 1fr;
+            grid-template-rows: auto
+        }
+  
+        .cwp-block-media-text .cwp-block-media-text__content,
+        .cwp-block-media-text .cwp-block-media-text__media {
+            align-self: center
+        }
+  
+        .cwp-block-media-text .cwp-block-media-text__media {
+            /*!rtl:begin:ignore*/
+            grid-column: 1;
+            grid-row: 1;
+            /*!rtl:end:ignore*/
+            margin: 0
+        }
+  
+        .cwp-block-media-text .cwp-block-media-text__content {
+            direction: ltr;
+            /*!rtl:begin:ignore*/
+            grid-column: 2;
+            grid-row: 1;
+            /*!rtl:end:ignore*/
+            padding: 0 8%;
+            word-break: break-word
+        }
+  
+  
+  
+  
+  
+        .has-medium-font-size {
+            font-size: 1.25em;
+        }
+  
+        .cfooter-widget {
+            width: 29.667%;
+            margin: 0;
+            margin-right: 5.5%;
+            line-height: 4em;
+            float: left;
+            color: #fff;
+        }
+  
+        .cwp-block-social-links .cwp-social-link a {
+            padding: .25em;
+            display: block;
+        }
+        .cwp-block-social-links .cwp-social-link.cwp-social-link.cwp-social-link {
+            margin: 4px 8px 4px 0;
+        }
+        .cwp-block-social-links.is-style-logos-only .cwp-social-link {
+            background: none;
+            padding: 4px;
+            color: #ffffff;
+        }
+        .cwp-block-social-link {
+            display: block;
+            border-radius: 9999px;
+            transition: transform .1s ease;
+            height: auto;
+        }
+        .cwp-block-social-links {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            padding-right: 0;
+            text-indent: 0;
+            margin-left: 0;
+        }
+        .cwp-block-social-links .cwp-social-link svg {
+            width: 1em;
+            height: 1em;
+        }
+  
+  
+  
+  
+  
+  
+        #cfooter-widgets .cfooter-widget li {
+            padding-left: 14px;
+            position: relative
+        }
+  
+        #cfooter-widgets .cfooter-widget li:before {
+            border-radius: 3px;
+            border-style: solid;
+            border-width: 3px;
+            content: "";
+            left: 0;
+            position: absolute;
+            top: 9px;
+            border-color: #0B0D17;
+        }
+  
+        #cfooter-widgets .cfooter-widget li a {
+            color: #fff;
+            text-decoration: none
+        }
+  
+        #cfooter-widgets .cfooter-widget li a:hover {
+            color: hsla(0, 0%, 100%, .7)
+        }
+    </style>    
+   
+  
+    <meta name="msapplication-TileColor" content="#FFBB33">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#FFBB33">
+    <meta property="og:site_name" content="Lap trinh 24h">
+    <meta property="og:url"
+          content="http:///contest/decpp29/ranking/">
+        <meta property="og:description" content="None">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script>window.bad_browser = true</script>
+    <![endif]-->
+<link rel="stylesheet" href="/static/cache/css/output.975c1920a150.css" type="text/css">    <link rel="canonical"
+          href="http:///contest/decpp29/ranking/">
+    <style>
+        #users-table .username {
+            min-width: 20em;
+        }
+
+        #users-table .rating-column {
+            min-width: 3em;
+        }
+
+        #users-table td {
+            height: 2.5em;
+        }
+
+        #users-table a {
+            display: block;
+        }
+
+        .userinfo a, .user-name a, .user-name form {
+            display: inline !important;
+        }
+
+        #users-table th a, #users-table th a:link, #users-table th a:visited {
+            color: white;
+        }
+
+        #users-table th a:hover {
+            color: #0F0;
+        }
+
+        #users-table td a:hover {
+            text-decoration: underline;
+        }
+
+        .rank {
+            min-width: 2.5em
+        }
+
+        .points {
+            min-width: 4em;
+        }
+
+        .disqualified {
+            background-color: #ffa8a8 !important;
+        }
+
+        .full-score, .full-score a {
+            font-weight: bold;
+            color: green;
+        }
+
+        .partial-score, .partial-score a {
+            color: green;
+        }
+
+        .failed-score, .failed-score a {
+            font-weight: bold;
+            color: red;
+        }
+
+        .pretest-full-score, .pretest-full-score a {
+            font-weight: bold;
+            color: #2980b9;
+        }
+
+        .pretest-partial-score, .pretest-partial-score a {
+            color: #2980b9;
+        }
+
+        .pretest-failed-score, .pretest-failed-score a {
+            font-weight: bold;
+            color: red;
+        }
+
+        .user-points, .user-points a {
+            font-weight: bold;
+            color: black;
+        }
+
+        .solving-time {
+            color: gray;
+            font-weight: normal;
+            font-size: 0.75em;
+            padding-bottom: -0.75em;
+        }
+
+        .point-denominator {
+            border-top: 1px solid gray;
+            font-size: 0.7em;
+        }
+
+        .start-time {
+            display: none;
+        }
+
+        .user-name {
+            position: relative;
+        }
+
+        .organization-column {
+            display: none;
+            text-align: left !important;
+            border-right: none !important;
+        }
+
+        .organization-column a {
+            color: gray !important;
+            font-weight: 600;
+        }
+    </style>
+
+
+    <style>
+        .select2-selection__arrow {
+            display: none;
+        }
+
+        .select2-selection__rendered {
+            cursor: text;
+            overflow: initial !important
+        }
+
+        .select2-results__option--highlighted {
+            background-color: #DEDEDE !important;
+        }
+
+        .select2-results__option {
+            white-space: nowrap;
+        }
+
+        #search-contest, #search-contest + .select2 {
+            margin-top: 0.5em;
+        }
+
+        #search-contest {
+            width: 200px;
+            height: 2.3em;
+        }
+    </style>
+    <style>
+        .user-pagination {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+
+<script src="/static/cache/js/output.6721e5112e7a.js"></script>        <script type="text/javascript">
+            $(function () {
+                window.install_tooltips = function () {
+                    $('td.user-name').find('> span:first-child').each(function () {
+                        var link = $(this);
+                        link.mouseenter(function (e) {
+                            var start_time = link.siblings('.start-time').text().trim();
+                            link.addClass('tooltipped tooltipped-e').attr('aria-label', start_time);
+                        }).mouseleave(function (e) {
+                            link.removeClass('tooltipped tooltipped-e').removeAttr('aria-label');
+                        });
+                    });
+                };
+
+                install_tooltips();
+            });
+        </script>
+    <script type="text/javascript">
+        $(function () {
+            var url = '/contest/decpp29/participations/__username__';
+            var placeholder = $('#search-contest').replaceWith($('<select>').attr({
+                id: 'search-contest'
+            })).attr('placeholder');
+
+            $('#search-contest').select2({
+                placeholder: placeholder,
+                ajax: {
+                    url: '/widgets/select2/contest_users/decpp29'
+                },
+                minimumInputLength: 1,
+                templateResult: function (data) {
+                    return $('<span>')
+                        .append($('<img>', {
+                            class: 'user-search-image',
+                            src: data.gravatar_url,
+                            width: 24,
+                            height: 24,
+                        }))
+                        .append($('<span>', {
+                            class: data.display_rank + ' user-search-name',
+                        }).text(data.text));
+                }
+            }).on('change', function () {
+                window.location.href = url.replace('__username__', $(this).val());
+            });
+
+            $('#show-organizations-checkbox').click(function () {
+                $('.organization-column').toggle();
+                localStorage.setItem('show-organizations', $('.organization-column').is(':visible') ? 'true' : 'false');
+            });
+            
+            if (localStorage.getItem('show-organizations') == 'true') {
+                $('.organization-column').show();
+                $('#show-organizations-checkbox').prop('checked', true);
+            }
+        });
+    </script>
+<script type="text/javascript">
+    $(function () {
+        $('.leaving-forever').click(function () {
+            return confirm('Are you sure you want to leave?\n' +
+                'You cannot come back to a virtual participation. You will have to start a new one.');
+        });
+
+        $('.first-join').click(function () {
+            return confirm('Are you sure you want to join?\n' +
+                'Joining a contest starts your timer, after which it becomes unstoppable.');
+        });
+    });
+</script>    <script>
+        $(function () {
+            $('#search-handle').replaceWith($('<select>').attr({
+                id: 'search-handle',
+                name: 'handle',
+                onchange: 'form.submit()'
+            }));
+            var in_user_redirect = false;
+            $('#search-handle').select2({
+                placeholder: 'Search by handle...',
+                ajax: {
+                    url: '/widgets/select2/user_search'
+                },
+                minimumInputLength: 1,
+                templateResult: function (data, container) {
+                    return $('<span>')
+                        .append($('<img>', {
+                            'class': 'user-search-image', src: data.gravatar_url,
+                            width: 24, height: 24
+                        }))
+                        .append($('<span>', {'class': data.display_rank + ' user-search-name'}).text(data.text))
+                        .append($('<a>', {href: '/user/' + data.text, 'class': 'user-redirect'})
+                            .append($('<i>', {'class': 'fa fa-mail-forward'}))
+                            .mouseover(function () {
+                                in_user_redirect = true;
+                            }).mouseout(function () {
+                                in_user_redirect = false;
+                            }));
+                }
+            }).on('select2:selecting', function () {
+                return !in_user_redirect;
+            });
+
+            var $last = null;
+            $(window).on('hashchange', function () {
+                var hash = window.location.hash;
+                if (hash.startsWith('#!')) {
+                    var $user = $('#user-' + hash.substring(2)).addClass('highlight');
+                    if ($user) {
+                        $(document).scrollTop($user.position().top - 50);
+                        if ($last !== null) $last.removeClass('highlight');
+                        $last = $user;
+                    }
+                }
+            }).trigger('hashchange');
+        });
+    </script>
+        <script>$(function () {
+            count_down($("#contest-time-remaining"));
+
+            var selected = null,
+                x_pos = 0, y_pos = 0,
+                x_elem = 0, y_elem = 0;
+
+            $('#contest-info').mousedown(function () {
+                selected = $(this);
+                x_elem = x_pos - selected.offset().left;
+                y_elem = y_pos - (selected.offset().top - $(window).scrollTop());
+                return false;
+            });
+
+            if (localStorage.getItem("contest_timer_pos")) {
+                data = localStorage.getItem("contest_timer_pos").split(":");
+                $("#contest-info").css({
+                    left: data[0],
+                    top: data[1]
+                });
+            }
+
+            $("#contest-info").show();
+
+            $(document).mousemove(function (e) {
+                x_pos = e.screenX;
+                y_pos = e.screenY;
+                x_pos = Math.max(Math.min(x_pos, window.innerWidth), 0);
+                y_pos = Math.max(Math.min(y_pos, window.innerHeight), 0);
+
+                if (selected !== null) {
+                    left_px = (x_pos - x_elem) + 'px';
+                    top_px = (y_pos - y_elem) + 'px';
+
+                    localStorage.setItem("contest_timer_pos", left_px + ":" + top_px);
+
+                    selected.css({
+                        left: left_px,
+                        top: top_px
+                    });
+                }
+            });
+
+            $(document).mouseup(function () {
+                selected = null;
+            })
+        });
+        </script>
+
+        <script>
+            window.user = {
+                email: 'chuluong3107@gmail.com',
+                id: '544',
+                name: 'chuluong3107'
+            };
+        </script>
+
+
+
+    <noscript>
+        <style>
+            #content {
+                margin: 80px auto auto;
+            }
+
+            #navigation {
+                top: 27px;
+            }
+        </style>
+    </noscript>
+</head>
+<script src="getdata.js"></script>
+<body>
+<svg width="0" height="0" style="display: block">
+    <defs>
+        <clipPath id="rating-clip"><circle cx="8" cy="8" r="7"/></clipPath>
+    </defs>
+</svg>
+<nav id="navigation" class="unselectable">
+    <div id="nav-container" style="font-size: 16px;">
+        <a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+        <ul id="nav-list">
+            <li class="home-nav-element"><a href="/">    <img src="/static/icons/logo.svg" alt="laptrinh24h.vn" width="210" height="42"
+         onerror="this.src=&quot;/static/icons/logo.png&quot;; this.onerror=null" style="border: none; margin: 6px 0 0 0;">
+</a></li>
+            <li class="home-nav-element"><span class="nav-divider"></span></li>
+            <li class="home-menu-item"><a href="/" class="nav-home">Home</a></li>
+                <li>
+                    <a href="/problems/" class="nav-problems">
+                        Đề bài
+                    </a>
+                </li>
+                <li>
+                    <a href="/submissions/" class="nav-submit">
+                        Các bài nộp
+                    </a>
+                </li>
+                <li>
+                    <a href="/contests/" class="nav-contests active">
+                        Lớp học
+                    </a>
+                </li>
+                <li>
+                    <a href="/courses/" class="nav-courses">
+                        Khoá học
+                    </a>
+                </li>
+                <li>
+                    <a href="/books/" class="nav-books">
+                        Sách song ngữ
+                    </a>
+                </li>
+                <li>
+                    <a href="/users/" class="nav-user">
+                        Xếp hạng
+                    </a>
+                </li>
+                <li>
+                    <a href="/hunt/" class="nav-hunt">
+                        Tuyển dụng
+                    </a>
+                </li>
+        </ul>
+
+        <span id="user-links">
+                <ul>
+                    <li>
+                        <a href="/user">
+                            <span>
+                                <img src="https://www.gravatar.com/avatar/078973c29cd2c247c51f4c2a23169eb9?d=identicon&amp;s=32" height="24" width="24"><span>Hello, <b>chuluong3107</b>.                                </span>
+                            </span>
+                        </a>
+                        <ul style="width: 150px">
+                            <li><a href="/edit/profile/">Edit profile</a></li>
+                                <li>
+                                    <form action="/accounts/logout/" method="POST">
+<input type='hidden' name='csrfmiddlewaretoken' value='67gKq88Yd3mPT4UMZgZqRk1guUjttYvgx8tj4odbBInanN2ROUbyJdwYTHQoopq5' />                                        <button type="submit">Log out</button>
+                                    </form>
+                                </li>
+                        </ul>
+                    </li>
+                </ul>
+        </span>
+    </div>
+    <div id="nav-shadow"></div>
+</nav>
+    <div id="contest-info">
+        <a href="/contest/decpp29" style="vertical-align: middle">
+            Lập Trình C++ 29 -
+                <div id="contest-time-remaining" data-secs="3710539.695834">
+                    42 days 22:42:19
+                </div>
+        </a>
+    </div>
+<div id="page-container">
+    <noscript>
+        <div id="noscript">This site works best with JavaScript enabled.</div>
+    </noscript>
+    <br>
+    <main id="content">
+
+<div class="page-title">
+    <div class="tabs">
+        <h2>Lập Trình C++ 29</h2>
+        <span class="spacer"></span>
+        <ul>
+        <li class="tab"><a href="/contest/decpp29"><i class="tab-icon fa fa-info-circle"></i> Info</a></li>
+
+
+                <li class="tab active"><a href="/contest/decpp29/ranking/"><i class="tab-icon fa fa-bar-chart"></i> Rankings</a></li>
+
+                    <li class="tab"><a href="/contest/decpp29/participations"><i class="tab-icon fa fa-users"></i> Participation</a></li>
+
+
+                    <form action="/contest/decpp29/leave" method="post"
+                          class="contest-join-pseudotab unselectable button">
+<input type='hidden' name='csrfmiddlewaretoken' value='67gKq88Yd3mPT4UMZgZqRk1guUjttYvgx8tj4odbBInanN2ROUbyJdwYTHQoopq5' />                        <input type="submit" value="Leave contest">
+                    </form>
+        </ul>
+    </div>
+</div>        <div id="content-body">
+    <div id="common-content">
+        <div id="content-left" class="users">
+    <div style="margin-bottom: 0.5em">
+        <input id="show-organizations-checkbox" type="checkbox" style="vertical-align: bottom">
+        <label for="show-organizations-checkbox" style="vertical-align: bottom">Show organizations</label>
+    </div>
+
+            <div class="h-scrollable-table">
+                <table id="users-table" class="table">
+<thead>
+<tr>
+    <th class="header rank">Rank</th>
+    <th class="organization-column">Organization</th>
+    <th class="header username">Username</th>
+
+    <th class="header points">
+        Points    </th>
+</tr>
+</thead>
+
+<tbody>
+    <tr id="user-lehohoanglong_772004"         style="background-color: limegreen;">
+        <td>1</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/lehohoanglong_772004">lehohoanglong_772004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/lehohoanglong_772004/">1188.333<div class="solving-time">95515:36:01</div></a></td>
+    </tr>
+    <tr id="user-nva2004gl81"         style="background-color: limegreen;">
+        <td>2</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/nva2004gl81">nva2004gl81</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/nva2004gl81/">1126.666<div class="solving-time">91733:57:22</div></a></td>
+    </tr>
+    <tr id="user-nongvanhoang1234"         style="background-color: limegreen;">
+        <td>3</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/nongvanhoang1234">nongvanhoang1234</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/nongvanhoang1234/">736.668<div class="solving-time">77849:17:49</div></a></td>
+    </tr>
+    <tr id="user-Kinghoang24"         style="background-color: yellow;">
+        <td>4</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Kinghoang24">Kinghoang24</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Kinghoang24/">704.999<div class="solving-time">65242:28:45</div></a></td>
+    </tr>
+    <tr id="user-DO_VIET_HUNG_23_10_2004"         style="background-color: yellow;">
+        <td>5</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/DO_VIET_HUNG_23_10_2004">DO_VIET_HUNG_23_10_2004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/DO_VIET_HUNG_23_10_2004/">590<div class="solving-time">49799:37:41</div></a></td>
+    </tr>
+    <tr id="user-nhattan"         style="background-color: yellow;">
+        <td>6</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/nhattan">nhattan</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/nhattan/">583.333<div class="solving-time">53779:53:41</div></a></td>
+    </tr>
+    <tr id="user-Y_Jop_Kdoh_07"         style="background-color: yellow;">
+        <td>7</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Y_Jop_Kdoh_07">Y_Jop_Kdoh_07</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Y_Jop_Kdoh_07/">568.333<div class="solving-time">46697:20:47</div></a></td>
+    </tr>
+    <tr id="user-thanh_nhu2004"         style="background-color: yellow;">
+        <td>8</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/thanh_nhu2004">thanh_nhu2004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/thanh_nhu2004/">553.334<div class="solving-time">46543:44:57</div></a></td>
+    </tr>
+    <tr id="user-LeHongAnh"         style="background-color: yellow;">
+        <td>9</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/LeHongAnh">LeHongAnh</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/LeHongAnh/">531.666<div class="solving-time">44505:05:54</div></a></td>
+    </tr>
+    <tr id="user-Trinh_Trong_Vinh"         style="background-color: yellow;">
+        <td>10</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Trinh_Trong_Vinh">Trinh_Trong_Vinh</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Trinh_Trong_Vinh/">513.334<div class="solving-time">44589:23:51</div></a></td>
+    </tr>
+    <tr id="user-nguyen_danh_duoc_22012004"         style="background-color: yellow;">
+        <td>11</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/nguyen_danh_duoc_22012004">nguyen_danh_duoc_22012004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/nguyen_danh_duoc_22012004/">485<div class="solving-time">41641:27:23</div></a></td>
+    </tr>
+    <tr id="user-Lequocnam28012004"         style="background-color: yellow;">
+        <td>12</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Lequocnam28012004">Lequocnam28012004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Lequocnam28012004/">480<div class="solving-time">46160:46:05</div></a></td>
+    </tr>
+    <tr id="user-tranthianhnguyen_26"         style="background-color: yellow;">
+        <td>13</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/tranthianhnguyen_26">tranthianhnguyen_26</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/tranthianhnguyen_26/">476.666<div class="solving-time">39633:11:29</div></a></td>
+    </tr>
+    <tr id="user-nguyengiaquan123"         style="background-color: yellow;">
+        <td>14</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/nguyengiaquan123">nguyengiaquan123</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/nguyengiaquan123/">475<div class="solving-time">39255:50:31</div></a></td>
+    </tr>
+    <tr id="user-truongnhat1703"         style="background-color: yellow;">
+        <td>15</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/truongnhat1703">truongnhat1703</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/truongnhat1703/">475<div class="solving-time">42490:38:41</div></a></td>
+    </tr>
+    <tr id="user-KHANHLY_20042003"         style="background-color: yellow;">
+        <td>16</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/KHANHLY_20042003">KHANHLY_20042003</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/KHANHLY_20042003/">448.333<div class="solving-time">37880:15:25</div></a></td>
+    </tr>
+    <tr id="user-Phamhoangtri2306"         style="background-color: yellow;">
+        <td>17</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Phamhoangtri2306">Phamhoangtri2306</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Phamhoangtri2306/">446.667<div class="solving-time">38244:26:40</div></a></td>
+    </tr>
+    <tr id="user-Vo_Khac_Kiet"         style="background-color: yellow;">
+        <td>18</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Vo_Khac_Kiet">Vo_Khac_Kiet</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Vo_Khac_Kiet/">440<div class="solving-time">38823:41:09</div></a></td>
+    </tr>
+    <tr id="user-tanloc1305"         style="background-color: yellow;">
+        <td>19</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/tanloc1305">tanloc1305</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/tanloc1305/">433.334<div class="solving-time">39881:42:02</div></a></td>
+    </tr>
+    <tr id="user-ngoquanganh_22112004"         style="background-color: white;">
+        <td>20</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/ngoquanganh_22112004">ngoquanganh_22112004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/ngoquanganh_22112004/">423.334<div class="solving-time">35094:13:42</div></a></td>
+    </tr>
+    <tr id="user-Truong_Duc_Hoang_15092004"         style="background-color: white;">
+        <td>21</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Truong_Duc_Hoang_15092004">Truong_Duc_Hoang_15092004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Truong_Duc_Hoang_15092004/">421.667<div class="solving-time">35279:37:19</div></a></td>
+    </tr>
+    <tr id="user-hieunguyen2107"         style="background-color: white;">
+        <td>22</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/hieunguyen2107">hieunguyen2107</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/hieunguyen2107/">420<div class="solving-time">37890:34:41</div></a></td>
+    </tr>
+    <tr id="user-hoangquyen04"         style="background-color: white;">
+        <td>23</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/hoangquyen04">hoangquyen04</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/hoangquyen04/">406.666<div class="solving-time">35331:21:50</div></a></td>
+    </tr>
+    <tr id="user-Phuc_26022000"         style="background-color: white;">
+        <td>24</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Phuc_26022000">Phuc_26022000</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Phuc_26022000/">400<div class="solving-time">33164:28:39</div></a></td>
+    </tr>
+    <tr id="user-hongocvinh1112"         style="background-color: white;">
+        <td>25</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/hongocvinh1112">hongocvinh1112</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/hongocvinh1112/">399.999<div class="solving-time">37902:25:19</div></a></td>
+    </tr>
+    <tr id="user-Phuong_10"         style="background-color: white;">
+        <td>26</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Phuong_10">Phuong_10</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Phuong_10/">394.999<div class="solving-time">36161:24:13</div></a></td>
+    </tr>
+    <tr id="user-nhatPTsv"         style="background-color: white;">
+        <td>27</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/nhatPTsv">nhatPTsv</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/nhatPTsv/">380.001<div class="solving-time">33913:33:49</div></a></td>
+    </tr>
+    <tr id="user-Qanh2ka4"         style="background-color: white;">
+        <td>28</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Qanh2ka4">Qanh2ka4</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Qanh2ka4/">375<div class="solving-time">34092:07:50</div></a></td>
+    </tr>
+    <tr id="user-truongktqs"         style="background-color: white;">
+        <td>29</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/truongktqs">truongktqs</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/truongktqs/">373.333<div class="solving-time">33068:58:53</div></a></td>
+    </tr>
+    <tr id="user-thuongphuc_01042004"         style="background-color: white;">
+        <td>30</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/thuongphuc_01042004">thuongphuc_01042004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/thuongphuc_01042004/">373.333<div class="solving-time">35164:02:21</div></a></td>
+    </tr>
+    <tr id="user-truong0407"         style="background-color: white;">
+        <td>31</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/truong0407">truong0407</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/truong0407/">370<div class="solving-time">32098:36:16</div></a></td>
+    </tr>
+    <tr id="user-Bui_Hoang_Tung_16012004"         style="background-color: white;">
+        <td>32</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Bui_Hoang_Tung_16012004">Bui_Hoang_Tung_16012004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Bui_Hoang_Tung_16012004/">370<div class="solving-time">32431:51:40</div></a></td>
+    </tr>
+    <tr id="user-Do_Van_An0707"         style="background-color: white;">
+        <td>33</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Do_Van_An0707">Do_Van_An0707</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Do_Van_An0707/">336.666<div class="solving-time">25986:16:53</div></a></td>
+    </tr>
+    <tr id="user-nhatminh221401"         style="background-color: white;">
+        <td>34</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/nhatminh221401">nhatminh221401</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/nhatminh221401/">333.334<div class="solving-time">29333:52:21</div></a></td>
+    </tr>
+    <tr id="user-huyuneti123"         style="background-color: white;">
+        <td>35</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/huyuneti123">huyuneti123</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/huyuneti123/">314.999<div class="solving-time">30074:22:43</div></a></td>
+    </tr>
+    <tr id="user-Le_Trong_Bach_15092007"         style="background-color: white;">
+        <td>36</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Le_Trong_Bach_15092007">Le_Trong_Bach_15092007</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Le_Trong_Bach_15092007/">311.667<div class="solving-time">30174:48:15</div></a></td>
+    </tr>
+    <tr id="user-Tuananha2k57pb"         style="background-color: white;">
+        <td>37</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Tuananha2k57pb">Tuananha2k57pb</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Tuananha2k57pb/">283.332<div class="solving-time">23827:43:17</div></a></td>
+    </tr>
+    <tr id="user-trannhutquang1903"         style="background-color: white;">
+        <td>38</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/trannhutquang1903">trannhutquang1903</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/trannhutquang1903/">280<div class="solving-time">22108:51:03</div></a></td>
+    </tr>
+    <tr id="user-Nguyen_minh_truong_30_12_2004"         style="background-color: white;">
+        <td>39</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Nguyen_minh_truong_30_12_2004">Nguyen_minh_truong_30_12_2004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Nguyen_minh_truong_30_12_2004/">275<div class="solving-time">28986:05:10</div></a></td>
+    </tr>
+    <tr id="user-Son_1406"         style="background-color: white;">
+        <td>40</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Son_1406">Son_1406</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Son_1406/">260<div class="solving-time">23125:37:35</div></a></td>
+    </tr>
+    <tr id="user-THAIBADANGKHOA"         style="background-color: white;">
+        <td>41</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/THAIBADANGKHOA">THAIBADANGKHOA</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/THAIBADANGKHOA/">260<div class="solving-time">26142:19:42</div></a></td>
+    </tr>
+    <tr id="user-chiennguyen21"         style="background-color: white;">
+        <td>42</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/chiennguyen21">chiennguyen21</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/chiennguyen21/">243.333<div class="solving-time">24643:15:54</div></a></td>
+    </tr>
+    <tr id="user-ng_dinhkhoi"         style="background-color: white;">
+        <td>43</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/ng_dinhkhoi">ng_dinhkhoi</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/ng_dinhkhoi/">233.333<div class="solving-time">20831:04:28</div></a></td>
+    </tr>
+    <tr id="user-nghiadaucau1"         style="background-color: white;">
+        <td>44</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/nghiadaucau1">nghiadaucau1</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/nghiadaucau1/">231.667<div class="solving-time">18736:13:34</div></a></td>
+    </tr>
+    <tr id="user-KieuAnh_2909"         style="background-color: white;">
+        <td>45</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/KieuAnh_2909">KieuAnh_2909</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/KieuAnh_2909/">231.667<div class="solving-time">21966:39:41</div></a></td>
+    </tr>
+    <tr id="user-Duyphuong1704"         style="background-color: white;">
+        <td>46</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Duyphuong1704">Duyphuong1704</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Duyphuong1704/">231.667<div class="solving-time">23222:11:40</div></a></td>
+    </tr>
+    <tr id="user-lephuongtravy_1001"         style="background-color: white;">
+        <td>47</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/lephuongtravy_1001">lephuongtravy_1001</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/lephuongtravy_1001/">201.667<div class="solving-time">16848:03:47</div></a></td>
+    </tr>
+    <tr id="user-Ngo_Xuan_Bac"         style="background-color: white;">
+        <td>48</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Ngo_Xuan_Bac">Ngo_Xuan_Bac</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Ngo_Xuan_Bac/">201.667<div class="solving-time">21659:23:55</div></a></td>
+    </tr>
+    <tr id="user-Do_thi_thanh_loan_27012004"         style="background-color: white;">
+        <td>49</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Do_thi_thanh_loan_27012004">Do_thi_thanh_loan_27012004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Do_thi_thanh_loan_27012004/">201.665<div class="solving-time">22273:43:25</div></a></td>
+    </tr>
+    <tr id="user-tdbang1503"         style="background-color: white;">
+        <td>50</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/tdbang1503">tdbang1503</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/tdbang1503/">190<div class="solving-time">16785:27:25</div></a></td>
+    </tr>
+    <tr id="user-HuanPG"         style="background-color: white;">
+        <td>51</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/HuanPG">HuanPG</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/HuanPG/">183.333<div class="solving-time">16003:59:08</div></a></td>
+    </tr>
+    <tr id="user-quynhgiang0408"         style="background-color: white;">
+        <td>52</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/quynhgiang0408">quynhgiang0408</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/quynhgiang0408/">173.332<div class="solving-time">19302:55:18</div></a></td>
+    </tr>
+    <tr id="user-minhtri012004"         style="background-color: white;">
+        <td>53</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/minhtri012004">minhtri012004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/minhtri012004/">168.333<div class="solving-time">17462:56:54</div></a></td>
+    </tr>
+    <tr id="user-dathuynh034"         style="background-color: white;">
+        <td>54</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/dathuynh034">dathuynh034</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/dathuynh034/">153.334<div class="solving-time">14376:07:06</div></a></td>
+    </tr>
+    <tr id="user-Nguyen_Minh_Quang29"         style="background-color: white;">
+        <td>55</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Nguyen_Minh_Quang29">Nguyen_Minh_Quang29</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Nguyen_Minh_Quang29/">140<div class="solving-time">12469:04:22</div></a></td>
+    </tr>
+    <tr id="user-NguyenThuy"         style="background-color: white;">
+        <td>56</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/NguyenThuy">NguyenThuy</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/NguyenThuy/">120<div class="solving-time">9487:21:01</div></a></td>
+    </tr>
+    <tr id="user-lahoanggiang_424"         style="background-color: white;">
+        <td>57</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/lahoanggiang_424">lahoanggiang_424</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/lahoanggiang_424/">118.333<div class="solving-time">12079:12:40</div></a></td>
+    </tr>
+    <tr id="user-Nguyen_Nam1902"         style="background-color: white;">
+        <td>58</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Nguyen_Nam1902">Nguyen_Nam1902</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Nguyen_Nam1902/">105<div class="solving-time">10427:39:53</div></a></td>
+    </tr>
+    <tr id="user-Bui_Hong_Ngoc2572004"         style="background-color: white;">
+        <td>59</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Bui_Hong_Ngoc2572004">Bui_Hong_Ngoc2572004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Bui_Hong_Ngoc2572004/">91.667<div class="solving-time">9078:56:48</div></a></td>
+    </tr>
+    <tr id="user-NguyenMinhDung1327"         style="background-color: white;">
+        <td>60</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/NguyenMinhDung1327">NguyenMinhDung1327</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/NguyenMinhDung1327/">90<div class="solving-time">7535:50:49</div></a></td>
+    </tr>
+    <tr id="user-vosytien"         style="background-color: white;">
+        <td>61</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/vosytien">vosytien</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/vosytien/">81.667<div class="solving-time">7928:56:33</div></a></td>
+    </tr>
+    <tr id="user-huyen_2506"         style="background-color: white;">
+        <td>62</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/huyen_2506">huyen_2506</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/huyen_2506/">81.667<div class="solving-time">10523:02:40</div></a></td>
+    </tr>
+    <tr id="user-Pham_Quang_Hao_15"         style="background-color: white;">
+        <td>63</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Pham_Quang_Hao_15">Pham_Quang_Hao_15</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Pham_Quang_Hao_15/">50<div class="solving-time">4293:23:08</div></a></td>
+    </tr>
+    <tr id="user-NguyenThiNga"         style="background-color: white;">
+        <td>64</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/NguyenThiNga">NguyenThiNga</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/NguyenThiNga/">50<div class="solving-time">5020:05:55</div></a></td>
+    </tr>
+    <tr id="user-nguyenanhdung"         style="background-color: white;">
+        <td>65</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-master user"><a href="/user/nguyenanhdung">nguyenanhdung</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/nguyenanhdung/">44.999<div class="solving-time">6356:32:30</div></a></td>
+    </tr>
+    <tr id="user-thaihung0110"         style="background-color: white;">
+        <td>66</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/thaihung0110">thaihung0110</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/thaihung0110/">20<div class="solving-time">1703:42:27</div></a></td>
+    </tr>
+    <tr id="user-Lê_Hồng_Anh_02_01"         style="background-color: white;">
+        <td>67</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/L%C3%AA_H%E1%BB%93ng_Anh_02_01">Lê_Hồng_Anh_02_01</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/L%C3%AA_H%E1%BB%93ng_Anh_02_01/">13.333<div class="solving-time">1443:44:53</div></a></td>
+    </tr>
+    <tr id="user-Duyanhsieunhan"         style="background-color: white;">
+        <td>68</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Duyanhsieunhan">Duyanhsieunhan</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Duyanhsieunhan/">10<div class="solving-time">282:20:51</div></a></td>
+    </tr>
+    <tr id="user-dotuangv"         style="background-color: white;">
+        <td>69</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/dotuangv">dotuangv</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/dotuangv/">10<div class="solving-time">456:47:43</div></a></td>
+    </tr>
+    <tr id="user-NguyenCongSInh0506"         style="background-color: white;">
+        <td>70</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/NguyenCongSInh0506">NguyenCongSInh0506</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/NguyenCongSInh0506/">10<div class="solving-time">719:35:10</div></a></td>
+    </tr>
+    <tr id="user-Luong_The_Truong3"         style="background-color: white;">
+        <td>71</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Luong_The_Truong3">Luong_The_Truong3</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Luong_The_Truong3/">10<div class="solving-time">719:44:10</div></a></td>
+    </tr>
+    <tr id="user-Nguyen_Phuong_10"         style="background-color: white;">
+        <td>72</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Nguyen_Phuong_10">Nguyen_Phuong_10</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Nguyen_Phuong_10/">10<div class="solving-time">730:05:31</div></a></td>
+    </tr>
+    <tr id="user-Nhattruong2508"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Nhattruong2508">Nhattruong2508</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Nhattruong2508/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-Nguyen_Khang"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Nguyen_Khang">Nguyen_Khang</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Nguyen_Khang/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-loipro"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/loipro">loipro</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/loipro/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-anhtu27122003"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/anhtu27122003">anhtu27122003</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/anhtu27122003/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-se181793"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/se181793">se181793</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/se181793/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-tamcoder"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/tamcoder">tamcoder</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/tamcoder/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-vothanhhao_25"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/vothanhhao_25">vothanhhao_25</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/vothanhhao_25/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-superadmin"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-newbie superadmin"><a href="/user/superadmin">superadmin</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/superadmin/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-chuluong3107"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/chuluong3107">chuluong3107</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/chuluong3107/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-VoChinh"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/VoChinh">VoChinh</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/VoChinh/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-diemquynhng"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/diemquynhng">diemquynhng</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/diemquynhng/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-giahuy0301"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/giahuy0301">giahuy0301</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/giahuy0301/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-oidoi12"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/oidoi12">oidoi12</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/oidoi12/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-trinh_2002"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/trinh_2002">trinh_2002</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/trinh_2002/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-thuannvabv9363005"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/thuannvabv9363005">thuannvabv9363005</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/thuannvabv9363005/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-Bui_Huu_Duy"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-expert user"><a href="/user/Bui_Huu_Duy">Bui_Huu_Duy</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Bui_Huu_Duy/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-tdh11406"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/tdh11406">tdh11406</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/tdh11406/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-quangduy1999"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/quangduy1999">quangduy1999</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/quangduy1999/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-tran_mai_thi_1412"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/tran_mai_thi_1412">tran_mai_thi_1412</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/tran_mai_thi_1412/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-Truong26122004"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/Truong26122004">Truong26122004</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/Truong26122004/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+    <tr id="user-canhnt04"         style="background-color: white;">
+        <td>73</td>
+    <td class="organization-column">
+    </td>
+        <td class="user-name"><span class="rating rate-none user"><a href="/user/canhnt04">canhnt04</a></span>             <div class="start-time active">
+                <span data-iso="2023-02-04T14:45:18+00:00" class="time-with-rel" title="Feb. 4, 2023, 4:45 a.m."
+          data-format="Started {time}">
+        Started on Feb. 4, 2023, 4:45 a.m.
+    </span>
+            </div>
+
+</td>
+    <td class="user-points"><a href="/contest/decpp29/submissions/canhnt04/">0<div class="solving-time">00:00:00</div></a></td>
+    </tr>
+</tbody>                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+
+<script type="text/javascript" src="/static/mathjax_config.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript">
+    window.reload_mathjax = function () {
+        MathJax.Hub.queue.Push(function () {
+            $('.tex-image').hide();
+            $('.tex-text').show();
+        });
+    };
+    window.reload_mathjax();
+</script>
+    <footer>
+        <span id="footer-content">
+            <br>
+            Ngôn ngữ hiển thị
+            <form action="/i18n/setlang/" method="post" style="display: inline">
+<input type='hidden' name='csrfmiddlewaretoken' value='67gKq88Yd3mPT4UMZgZqRk1guUjttYvgx8tj4odbBInanN2ROUbyJdwYTHQoopq5' />            <input name="next" type="hidden" value="/contest/decpp29/ranking/">
+            <select name="language" onchange="form.submit()" style="height: 1.5em">
+                    <option value="en" selected>
+                        English (en)
+                    </option>
+                    <option value="vi" >
+                        Tiếng Việt (vi)
+                    </option>
+            </select>
+          </form>
+        </span>
+      
+        <!--   Wordpress Footer     -->
+        <div class="cus" style="overflow-x: hidden;line-height: 2em;font-size: 16px;font-weight: 500;-webkit-font-smoothing: antialiased;color: #666;background-color: #fff;font-family: Open Sans,Arial,sans-serif;margin: 0;" class=" et_pb_gutters3 ">
+        <div style="padding-top: 0px; margin-top: -1px; overflow-y: hidden;">
+          <div>
+            <div style="background-color: #0b0d17;">
+              <div style="width: 80%;
+          margin: auto;
+          text-align: left;
+          position: relative;
+          max-width: 1400px;">
+                <div style="padding: 6% 0 0;" class="cclearfix" id="cfooter-widgets">
+                  <div class="cfooter-widget"><div class="">
+                    <figure style="margin: 0"><img loading="lazy" src="/static/icons/logo.png" alt="" width="200" height="55"><figcaption>Chi nhánh CLB Lập trình Fullhouse tại Hà Nội<br><img src="https://laptrinh24h.haian.cf/wp-content/uploads/2021/07/Vector.png" alt=""> Số 52 Đại An, phường Văn Quán, quận Hà Đông</figcaption></figure>
+                  </div>   <!-- end . --></div> <!-- end  --><div class="cfooter-widget"><div style="margin-top: -1em; float: left; max-width: 100%;">
+                  <p style="text-align: left;">Liên hệ với LapTrinh24h<br><img loading="lazy" width="54" height="44" style="width: 15px;" src="https://laptrinh24h.haian.cf/wp-content/uploads/2021/07/Vector-3.png" alt="">  clblaptrinhfullhouse@gmail.com<br><img loading="lazy" width="54" height="54" style="width: 15px;" src="https://laptrinh24h.haian.cf/wp-content/uploads/2021/07/Vector-2.png" alt="">  Laptrinh24h.com<br><img loading="lazy" width="48" height="48" style="width: 15px;" src="https://laptrinh24h.haian.cf/wp-content/uploads/2021/07/Vector-1.png" alt="">  0372229686</p>
+                </div> <!-- end . --></div> <!-- end  --><div class="" style="
+          margin-right: 0;
+          line-height: 2em;
+      color: #fff;"><div class="" style="margin-bottom: 0px">
+                  <div class="cwp-block-media-text" style="grid-template-columns:auto 100%"><div class="cwp-block-media-text__content" style="padding: 0">
+                    <p class="has-medium-font-size" style="font-size: 16px">Người sáng lập Ngô Nhân Đức</p>
+                    <p class="has-medium-font-size" style="font-size: 16px">STK duy nhất : 77.669.669.66666</p>
+                    <p class="has-medium-font-size" style="font-size: 16px">Ngân Hàng Quân Đội MB BANK</p>
+                  </div></div>
+                </div> <!-- end . --> <div id="" class="" style="float: left;
+      max-width: 100%;word-wrap: break-word;"><div id="" class="">
+                  <div class="">
+                    <div class="" style="flex-basis:100%">
+                      <div class="">
+                        <div class="">
+                          <ul class="cwp-block-social-links  is-style-logos-only" style="font-size: 36px;">
+                            <li class="cwp-social-link cwp-block-social-link"><a href="https://www.facebook.com/CLB-lÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­p-trÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ã‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬nh-Full-House-PTIT-102456951253959" aria-label="Facebook: google.com" class="" style="fill: #fff;"> <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg></a></li>
+                            <li class="cwp-social-link cwp-block-social-link"><a href="https://zalo.me/0961425867" aria-label="" class="" style="fill: #fff;"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="250px" height="250px"><path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 15.580078 6 C 12.00899 9.7156859 10 14.518083 10 19.5 C 10 24.66 12.110156 29.599844 15.910156 33.339844 C 16.030156 33.549844 16.129922 34.579531 15.669922 35.769531 C 15.379922 36.519531 14.799687 37.499141 13.679688 37.869141 C 13.249688 38.009141 12.97 38.430859 13 38.880859 C 13.03 39.330859 13.360781 39.710781 13.800781 39.800781 C 16.670781 40.370781 18.529297 39.510078 20.029297 38.830078 C 21.379297 38.210078 22.270625 37.789609 23.640625 38.349609 C 26.440625 39.439609 29.42 40 32.5 40 C 36.593685 40 40.531459 39.000731 44 37.113281 L 44 41 C 44 42.668484 42.668484 44 41 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 33 15 C 33.55 15 34 15.45 34 16 L 34 25 C 34 25.55 33.55 26 33 26 C 32.45 26 32 25.55 32 25 L 32 16 C 32 15.45 32.45 15 33 15 z M 18 16 L 23 16 C 23.36 16 23.700859 16.199531 23.880859 16.519531 C 24.050859 16.829531 24.039609 17.219297 23.849609 17.529297 L 19.800781 24 L 23 24 C 23.55 24 24 24.45 24 25 C 24 25.55 23.55 26 23 26 L 18 26 C 17.64 26 17.299141 25.800469 17.119141 25.480469 C 16.949141 25.170469 16.960391 24.780703 17.150391 24.470703 L 21.199219 18 L 18 18 C 17.45 18 17 17.55 17 17 C 17 16.45 17.45 16 18 16 z M 27.5 19 C 28.11 19 28.679453 19.169219 29.189453 19.449219 C 29.369453 19.189219 29.65 19 30 19 C 30.55 19 31 19.45 31 20 L 31 25 C 31 25.55 30.55 26 30 26 C 29.65 26 29.369453 25.810781 29.189453 25.550781 C 28.679453 25.830781 28.11 26 27.5 26 C 25.57 26 24 24.43 24 22.5 C 24 20.57 25.57 19 27.5 19 z M 38.5 19 C 40.43 19 42 20.57 42 22.5 C 42 24.43 40.43 26 38.5 26 C 36.57 26 35 24.43 35 22.5 C 35 20.57 36.57 19 38.5 19 z M 27.5 21 C 27.39625 21 27.29502 21.011309 27.197266 21.03125 C 27.001758 21.071133 26.819727 21.148164 26.660156 21.255859 C 26.500586 21.363555 26.363555 21.500586 26.255859 21.660156 C 26.148164 21.819727 26.071133 22.001758 26.03125 22.197266 C 26.011309 22.29502 26 22.39625 26 22.5 C 26 22.60375 26.011309 22.70498 26.03125 22.802734 C 26.051191 22.900488 26.079297 22.994219 26.117188 23.083984 C 26.155078 23.17375 26.202012 23.260059 26.255859 23.339844 C 26.309707 23.419629 26.371641 23.492734 26.439453 23.560547 C 26.507266 23.628359 26.580371 23.690293 26.660156 23.744141 C 26.819727 23.851836 27.001758 23.928867 27.197266 23.96875 C 27.29502 23.988691 27.39625 24 27.5 24 C 27.60375 24 27.70498 23.988691 27.802734 23.96875 C 28.487012 23.82916 29 23.22625 29 22.5 C 29 21.67 28.33 21 27.5 21 z M 38.5 21 C 38.39625 21 38.29502 21.011309 38.197266 21.03125 C 38.099512 21.051191 38.005781 21.079297 37.916016 21.117188 C 37.82625 21.155078 37.739941 21.202012 37.660156 21.255859 C 37.580371 21.309707 37.507266 21.371641 37.439453 21.439453 C 37.303828 21.575078 37.192969 21.736484 37.117188 21.916016 C 37.079297 22.005781 37.051191 22.099512 37.03125 22.197266 C 37.011309 22.29502 37 22.39625 37 22.5 C 37 22.60375 37.011309 22.70498 37.03125 22.802734 C 37.051191 22.900488 37.079297 22.994219 37.117188 23.083984 C 37.155078 23.17375 37.202012 23.260059 37.255859 23.339844 C 37.309707 23.419629 37.371641 23.492734 37.439453 23.560547 C 37.507266 23.628359 37.580371 23.690293 37.660156 23.744141 C 37.739941 23.797988 37.82625 23.844922 37.916016 23.882812 C 38.005781 23.920703 38.099512 23.948809 38.197266 23.96875 C 38.29502 23.988691 38.39625 24 38.5 24 C 38.60375 24 38.70498 23.988691 38.802734 23.96875 C 39.487012 23.82916 40 23.22625 40 22.5 C 40 21.67 39.33 21 38.5 21 z"></path></svg></a></li>
+                            <li class="cwp-social-link cwp-block-social-link"><a href="https://www.youtube.com/channel/UCiCm88z0pLbPj69_Iuk4bFw" aria-label="YouTube: google.com" class="" style="fill: #fff;"> <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"></path></svg></a></li>
+                            <li class="cwp-social-link cwp-block-social-link"><a href="https://www.youtube.com/channel/UCiCm88z0pLbPj69_Iuk4bFw" aria-label="Tiktok: google.com" class="" style="fill: #fff;"> <svg height="2500" viewBox="0 0 250 250" width="2500" xmlns="http://www.w3.org/2000/svg"><g clip-rule="evenodd" fill-rule="evenodd"><path d="M25 0h200c13.808 0 25 11.192 25 25v200c0 13.808-11.192 25-25 25H25c-13.808 0-25-11.192-25-25V25C0 11.192 11.192 0 25 0z" fill="#010101"/><path d="M156.98 230c7.607 0 13.774-6.117 13.774-13.662s-6.167-13.663-13.774-13.663h-2.075c7.607 0 13.774 6.118 13.774 13.663S162.512 230 154.905 230z" fill="#ee1d51"/><path d="M154.717 202.675h-2.075c-7.607 0-13.775 6.118-13.775 13.663S145.035 230 152.642 230h2.075c-7.608 0-13.775-6.117-13.775-13.662s6.167-13.663 13.775-13.663z" fill="#66c8cf"/><ellipse cx="154.811" cy="216.338" fill="#010101" rx="6.699" ry="6.643"/><path d="M50 196.5v6.925h8.112v26.388h8.115v-26.201h6.603l2.264-7.112zm66.415 0v6.925h8.112v26.388h8.115v-26.201h6.603l2.264-7.112zm-39.81 3.93c0-2.17 1.771-3.93 3.959-3.93 2.19 0 3.963 1.76 3.963 3.93s-1.772 3.93-3.963 3.93c-2.188-.001-3.959-1.76-3.959-3.93zm0 6.738h7.922v22.645h-7.922zM87.924 196.5v33.313h7.925v-8.608l2.453-2.248L106.037 230h8.49l-11.133-16.095 10-9.733h-9.622l-7.923 7.86V196.5zm85.47 0v33.313h7.926v-8.608l2.452-2.248L191.509 230H200l-11.133-16.095 10-9.733h-9.622l-7.925 7.86V196.5z" fill="#fff"/><path d="M161.167 81.186c10.944 7.819 24.352 12.42 38.832 12.42V65.755a39.26 39.26 0 0 1-8.155-.853v21.923c-14.479 0-27.885-4.601-38.832-12.42v56.835c0 28.432-23.06 51.479-51.505 51.479-10.613 0-20.478-3.207-28.673-8.707C82.187 183.57 95.23 189.5 109.66 189.5c28.447 0 51.508-23.047 51.508-51.48V81.186zm10.06-28.098c-5.593-6.107-9.265-14-10.06-22.726V26.78h-7.728c1.945 11.09 8.58 20.565 17.788 26.308zm-80.402 99.107a23.445 23.445 0 0 1-4.806-14.256c0-13.004 10.548-23.547 23.561-23.547a23.6 23.6 0 0 1 7.147 1.103V87.022a51.97 51.97 0 0 0-8.152-.469v22.162a23.619 23.619 0 0 0-7.15-1.103c-13.013 0-23.56 10.543-23.56 23.548 0 9.195 5.272 17.157 12.96 21.035z" fill="#ee1d52"/><path d="M153.012 74.405c10.947 7.819 24.353 12.42 38.832 12.42V64.902c-8.082-1.72-15.237-5.942-20.617-11.814-9.208-5.743-15.843-15.218-17.788-26.308H133.14v111.239c-.046 12.968-10.576 23.468-23.561 23.468-7.652 0-14.45-3.645-18.755-9.292-7.688-3.878-12.96-11.84-12.96-21.035 0-13.005 10.547-23.548 23.56-23.548 2.493 0 4.896.388 7.15 1.103V86.553c-27.945.577-50.42 23.399-50.42 51.467 0 14.011 5.597 26.713 14.68 35.993 8.195 5.5 18.06 8.707 28.673 8.707 28.445 0 51.505-23.048 51.505-51.479z" fill="#fff"/><path d="M191.844 64.902v-5.928a38.84 38.84 0 0 1-20.617-5.887 38.948 38.948 0 0 0 20.617 11.815zM153.439 26.78a39.524 39.524 0 0 1-.427-3.198V20h-28.028v111.24c-.045 12.967-10.574 23.467-23.56 23.467-3.813 0-7.412-.904-10.6-2.512 4.305 5.647 11.103 9.292 18.755 9.292 12.984 0 23.515-10.5 23.561-23.468V26.78zm-44.864 59.773v-6.311a51.97 51.97 0 0 0-7.067-.479C73.06 79.763 50 102.811 50 131.24c0 17.824 9.063 33.532 22.835 42.772-9.083-9.28-14.68-21.982-14.68-35.993 0-28.067 22.474-50.889 50.42-51.466z" fill="#69c9d0"/><path d="M154.904 230c7.607 0 13.775-6.117 13.775-13.662s-6.168-13.663-13.775-13.663h-.188c-7.607 0-13.774 6.118-13.774 13.663S147.109 230 154.716 230zm-6.792-13.662c0-3.67 3-6.643 6.7-6.643 3.697 0 6.697 2.973 6.697 6.643s-3 6.645-6.697 6.645c-3.7-.001-6.7-2.975-6.7-6.645z" fill="#fff"/></g></svg></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                </div> <!-- end . --></div> <!-- end  -->    </div> <!-- #cfooter-widgets -->
+              </div>    <!-- .container -->
+              <div style="background-color: rgba(0,0,0,.32); padding: 15px 0 5px;">
+                <div style="width: 80%;
+          margin: auto; text-align: left;
+          position: relative; max-width: 1400px;" class="cclearfix">
+                  <div style="
+          text-align: center;
+          color: #666;
+          padding-bottom: 10px;
+          float: inherit;">Copyright C 2021 LapTrinh24h.vn  -  Powered by OnlineJudge</div>					</div>	<!-- .container -->
+              </div>
+            </div> <!-- #main-footer -->
+          </div> <!-- #et-main-area -->
+        </div>
+        </div>
+        
+    </footer>
+
+</div>
+</body>
+</html>
